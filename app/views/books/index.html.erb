@@ -1,3 +1,11 @@
+<% if flash[:destroy] %>
+  <p> <%= flash[:destroy] %> </p>
+<% end  %>
+
+<% if flash[:success] %>
+  <p> <%= flash[:success] %>
+<% end %>
+
 <h1> Books</h1>
 <table>
   <thead>
