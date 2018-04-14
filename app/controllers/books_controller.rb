@@ -6,9 +6,13 @@ class BooksController < ApplicationController
 
   def create
     book = Book.new(book_params)
-    book.save
-    flash[:success] = 'Book was successfully created.'
-    redirect_to book_path(book.id)
+    if book.save # 保存できた場合
+      flash[:success] = 'Book was successfully created.'
+      redirect_to book_path(book.id)
+    else # 保存出来なかった場合
+      flash[:blank] = 'Please enter Title and Body'
+      redirect_to books_path
+    end
   end
 
   def show
