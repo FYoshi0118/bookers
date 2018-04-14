@@ -3,7 +3,11 @@
 <% end  %>
 
 <% if flash[:success] %>
-  <p> <%= flash[:success] %>
+  <p> <%= flash[:success] %> </p>
+<% end %>
+
+<% if flash[:blank] %>
+  <p> <%= flash[:blank] %> </p>
 <% end %>
 
 <h1> Books</h1>
