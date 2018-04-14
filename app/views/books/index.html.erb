@@ -1,14 +1,6 @@
-<% if flash[:destroy] %>
-  <p> <%= flash[:destroy] %> </p>
-<% end  %>
-
-<% if flash[:success] %>
-  <p> <%= flash[:success] %> </p>
-<% end %>
-
-<% if flash[:blank] %>
-  <p> <%= flash[:blank] %> </p>
-<% end %>
+<%= flash[:destroy] if flash[:destroy] %>
+<%= flash[:success] if flash[:success] %>
+<%= flash[:blank] if flash[:blank] %>
 
 <h1> Books</h1>
 <table>
